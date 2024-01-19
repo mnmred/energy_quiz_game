@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../../style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.InfoScreenCtrl">
+   <children>
+      <StackPane layoutX="5.0" layoutY="225.0" prefHeight="492.0" prefWidth="1920.0">
+         <children>
+            <ImageView id="pointsJoker" fx:id="pointsJoker" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/images/2xpoints.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets bottom="200.0" right="900.0" />
+               </StackPane.margin>
+            </ImageView>
+            <ImageView id="hintJoker" fx:id="hintJoker" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/images/hint.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets bottom="200.0" left="900.0" />
+               </StackPane.margin>
+            </ImageView>
+            <ImageView id="timeJoker" fx:id="timeJoker" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/images/hourglass.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets bottom="200.0" />
+               </StackPane.margin>
+            </ImageView>
+            <Label id="explain" fx:id="hintExplainer" prefHeight="250.0" prefWidth="400.0" text="explain hint">
+               <StackPane.margin>
+                  <Insets left="900.0" top="200.0" />
+               </StackPane.margin>
+            </Label>
+            <Label id="explain" fx:id="timeExplainer" prefHeight="250.0" prefWidth="400.0" text="explain time">
+               <StackPane.margin>
+                  <Insets top="200.0" />
+               </StackPane.margin>
+            </Label>
+            <Label id="explain" fx:id="doublePointsExplainer" prefHeight="250.0" prefWidth="400.0" text="explain 2x">
+               <StackPane.margin>
+                  <Insets right="900.0" top="200.0" />
+               </StackPane.margin>
+            </Label>
+         </children>
+      </StackPane>
+      <ImageView id="home" fx:id="home" fitHeight="140.0" fitWidth="140.0" layoutX="1760.0" layoutY="10.0" onMouseClicked="#showHome" pickOnBounds="true" preserveRatio="true" styleClass="clickable">
+         <image>
+            <Image url="@/images/home.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <ImageView id="sound" fx:id="music" fitHeight="140.0" fitWidth="140.0" layoutX="5.0" layoutY="10.0" onMouseClicked="#toggleMusic" pickOnBounds="true" preserveRatio="true" styleClass="clickable">
+      <image>
+         <Image url="@/images/music.png" />
+      </image>
+      </ImageView>
+         </children>
+</AnchorPane>

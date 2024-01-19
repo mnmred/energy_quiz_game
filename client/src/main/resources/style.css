@@ -1,0 +1,168 @@
+.button {
+    -fx-background-color: #3d8af7;
+    -fx-background-radius: 50;
+
+    -fx-border-radius: 50px;
+    -fx-border-width: 5px;
+    -fx-border-color: black;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+
+    -fx-font-size: 40;
+    -fx-text-fill: white;
+    -fx-font-family: "Showcard Gothic"; /* feel free to change it to watever you like */
+
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-cursor: "HAND"; /*applied this style to all clickable things*/
+}
+
+.answer-button {
+    -fx-pref-width: 300px;
+    -fx-wrap-text: true;
+}
+
+.clickable { 
+    -fx-cursor: "HAND"; /*applied this style to all clickable things*/
+}
+
+.label {
+    -fx-alignment: center;
+    -fx-font-size: 30;
+    -fx-text-fill: white;
+    -fx-font-family: "Showcard Gothic"; /* feel free to change it to watever you like */
+}
+
+#mediumTitle {
+    -fx-alignment: center;
+    -fx-font-size: 50;
+    -fx-text-fill: white;
+    -fx-font-family: "Showcard Gothic";
+}
+
+#addButton {
+    -fx-border-width: 3px;
+    -fx-font-size: 25;
+}
+
+#ActivityDescription {
+    -fx-alignment: center;
+    -fx-font-size: 20;
+    -fx-text-fill: white;
+    -fx-font-family: "Times New Roman";
+}
+
+#ActivityDescription1 {
+    -fx-alignment: center;
+    -fx-font-size: 20;
+    -fx-text-fill: white;
+    -fx-font-family: "Times New Roman";
+}
+
+#ActivityDescription2 {
+    -fx-alignment: center;
+    -fx-font-size: 20;
+    -fx-text-fill: white;
+    -fx-font-family: "Times New Roman";
+}
+
+#ActivityDescription3 {
+    -fx-alignment: center;
+    -fx-font-size: 20;
+    -fx-text-fill: white;
+    -fx-font-family: "Times New Roman";
+}
+
+/*.label.text {
+    !*this is also in .button class so maybe avoid this duplicate way of coding?*!
+    -fx-stroke: black;
+    -fx-stroke-width: 5px;
+}*/
+
+#questionBox {
+    -fx-background-color: #7fcdf4;
+    -fx-effect: dropshadow(gaussian, rgba(1, 1, 1, 1), 30, 0.2, 0.0, 0.0);
+}
+
+#questionLabel {
+    -fx-font-family: "Showcard Gothic"; /* feel free to change it to watever you like */
+    -fx-font-size: 80;
+    -fx-alignment: center;
+    -fx-text-fill: white;
+}
+
+#errorLabel {
+    -fx-text-fill: red;
+}
+
+.root{
+    -fx-background-image: url(images/clouds.png);
+}
+
+
+#mainTitle {
+    -fx-font-size: 60;
+}
+
+.label .text, .button .text{
+    -fx-stroke: black;
+    -fx-stroke-width: 2px;
+}
+
+.scroll-pane{
+    -fx-border-radius: 50px;
+    -fx-border-width: 10px;
+    -fx-background-color: #263f4b;
+    -fx-background-radius: 60px;
+    -fx-border-color: white;
+}
+
+.scroll-pane .viewport{
+    -fx-background-radius: 50px;
+    -fx-background-color: #263f4b;
+}
+
+
+#explain {
+    -fx-font-size: 25;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+#save{
+    -fx-background-color: green;
+}
+
+#edit-button{
+    -fx-background-color: grey;
+}
+
+.text-area {
+    -fx-alignment: center;
+    -fx-font-size: 30;
+}
+
+VBox {/*this is the chatbox*/
+    -fx-border-radius: 20px;
+    -fx-border-width: 5px;
+    -fx-border-color: black;
+}
+
+VBox Label {/*text within the chatbox*/
+    -fx-alignment: left;
+    -fx-text-alignment: left;
+    -fx-tile-alignment: left;
+}
+
+/*StackPane > Label {
+    -fx-alignment: center;
+    -fx-font-size: 10;
+    -fx-text-fill: blue;
+    -fx-font-family: "Arial"; !* feel free to change it to watever you like *!
+}*/
+
+#chatRelated {
+    -fx-alignment: center;
+    -fx-font-size: 23;
+    -fx-text-fill: white;
+    -fx-font-family: "Showcard Gothic"; /* feel free to change it to watever you like */
+}

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../../style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.SimilarQuestionCtrl">
+    <children>
+        <Pane id="questionBox" layoutY="150.0" prefHeight="100.0" prefWidth="1920.0">
+            <children>
+                <Label id="questionLabel" prefHeight="100.0" prefWidth="1920.0" text="which activity is the most similar?" wrapText="true">
+                    <font>
+                        <Font name="Script MT Bold" size="64.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <ImageView id="home" fx:id="home" fitHeight="140.0" fitWidth="140.0" layoutX="1760.0" layoutY="10.0" onMouseClicked="#showHome" pickOnBounds="true" preserveRatio="true" styleClass="clickable">
+            <image>
+                <Image url="@/images/home.png" />
+            </image>
+            <viewport>
+                <Rectangle2D />
+            </viewport>
+        </ImageView>
+        <ImageView id="sound" fx:id="music" fitHeight="140.0" fitWidth="140.0" layoutX="5.0" layoutY="10.0" onMouseClicked="#toggleMusic" pickOnBounds="true" preserveRatio="true" styleClass="clickable">
+            <image>
+                <Image url="@/images/music.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="793.0" layoutY="10.0" prefHeight="82.0" prefWidth="334.0" text="Time Left" textFill="WHITE">
+            <font>
+                <Font name="Showcard Gothic" size="64.0" />
+            </font>
+        </Label>
+        <ProgressBar id="timeBar" fx:id="pgBar" layoutX="360.0" layoutY="90.0" prefHeight="30.0" prefWidth="1200.0" progress="1.0">
+            <effect>
+                <ColorAdjust />
+            </effect>
+        </ProgressBar>
+        <ImageView id="hintJoker" fx:id="hintJoker" fitHeight="200.0" fitWidth="200.0" layoutX="1700.0" layoutY="300.0" onKeyPressed="#hintClick" onMouseClicked="#hintClick" pickOnBounds="true" preserveRatio="true" styleClass="clickable" AnchorPane.bottomAnchor="580.0" AnchorPane.leftAnchor="1700.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="300.0">
+            <image>
+                <Image url="@/images/hint.png" />
+            </image>
+        </ImageView>
+        <ImageView id="pointsJoker" fx:id="pointsJoker" fitHeight="200.0" fitWidth="200.0" layoutX="1700.0" layoutY="500.0" onKeyPressed="#pointsClick" onMouseClicked="#pointsClick" pickOnBounds="true" preserveRatio="true" styleClass="clickable">
+            <image>
+                <Image url="@/images/2xpoints.png" />
+            </image>
+        </ImageView>
+        <ImageView id="timeJoker" fx:id="timeJoker" fitHeight="200.0" fitWidth="200.0" layoutX="1700.0" layoutY="700.0" onKeyPressed="#timeClick" onMouseClicked="#timeClick" pickOnBounds="true" preserveRatio="true" styleClass="clickable">
+            <image>
+                <Image url="@/images/hourglass.png" />
+            </image>
+        </ImageView>
+        <Label id="questionCountLabel" fx:id="questionTracker" layoutX="1450.0" layoutY="900.0" text="Question x/y" />
+        <Label id="scoreLabel" fx:id="scoreLabel" layoutX="1450.0" layoutY="960.0" text="Score x/y" />
+        <ImageView id="questionImage" fx:id="questionImage" fitHeight="265.0" fitWidth="346.0" layoutX="791.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true" />
+        <Label id="ActivityDescription" fx:id="ActivityDescription" layoutX="783.0" layoutY="269.0" prefHeight="103.0" prefWidth="368.0" text="Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt" wrapText="true" />
+        <StackPane layoutX="350.0" layoutY="752.0" prefHeight="150.0" prefWidth="1189.0" AnchorPane.rightAnchor="381.0">
+            <children>
+                <Button id="firstButton" fx:id="firstButton" mnemonicParsing="false" onMouseClicked="#answerClick" prefHeight="82.0" prefWidth="256.0" text="A">
+                    <styleClass>
+                        <String fx:value="answer-button" />
+                        <String fx:value="clickable" />
+                    </styleClass>
+                    <StackPane.margin>
+                        <Insets right="800.0" />
+                    </StackPane.margin>
+                </Button>
+                <Button id="secondButton" fx:id="secondButton" mnemonicParsing="false" onMouseClicked="#answerClick" text="B">
+                    <styleClass>
+                        <String fx:value="answer-button" />
+                        <String fx:value="clickable" />
+                    </styleClass>
+                </Button>
+                <Button id="thirdButton" fx:id="thirdButton" mnemonicParsing="false" onMouseClicked="#answerClick" text="C">
+                    <styleClass>
+                        <String fx:value="answer-button" />
+                        <String fx:value="clickable" />
+                    </styleClass>
+                    <StackPane.margin>
+                        <Insets left="800.0" />
+                    </StackPane.margin>
+                </Button>
+            </children>
+        </StackPane>
+        <StackPane fx:id="chatAndEmoteHolder" layoutX="46.0" layoutY="265.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="288.0">
+            <children>
+                <VBox id="chatbox1" fx:id="chatbox" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="311.0" prefWidth="288.0">
+                    <StackPane.margin>
+                        <Insets bottom="100.0" />
+                    </StackPane.margin>
+                </VBox>
+                <Label id="chatRelated" fx:id="chatboxTitle" text="chatbox">
+                    <StackPane.margin>
+                        <Insets bottom="450.0" />
+                    </StackPane.margin>
+                </Label>
+                <Label id="chatRelated" fx:id="emoteTitle" text="pick an emote">
+                    <StackPane.margin>
+                        <Insets top="300.0" />
+                    </StackPane.margin>
+                </Label>
+                <StackPane fx:id="emotePane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="13.0" prefWidth="260.0">
+                    <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" onMousePressed="#emote" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/angry.png" />
+                            </image>
+                            <StackPane.margin>
+                                <Insets right="70.0" />
+                            </StackPane.margin>
+                        </ImageView>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" onMousePressed="#emote" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/happy.png" />
+                            </image>
+                            <StackPane.margin>
+                                <Insets left="70.0" />
+                            </StackPane.margin>
+                        </ImageView>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" onMousePressed="#emote" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/sunglasses.png" />
+                            </image>
+                            <StackPane.margin>
+                                <Insets right="200.0" />
+                            </StackPane.margin>
+                        </ImageView>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" onMousePressed="#emote" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/tears.png" />
+                            </image>
+                            <StackPane.margin>
+                                <Insets left="200.0" />
+                            </StackPane.margin>
+                        </ImageView>
+                    </children>
+                    <StackPane.margin>
+                        <Insets top="400.0" />
+                    </StackPane.margin>
+                </StackPane>
+            </children>
+        </StackPane>
+        <StackPane layoutX="50.0" layoutY="830.0" prefHeight="223.0" prefWidth="313.0">
+            <children>
+                <VBox fx:id="notificationBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="162.0" prefWidth="400.0">
+                    <StackPane.margin>
+                        <Insets top="45.0" />
+                    </StackPane.margin>
+                </VBox>
+                <Label id="chatRelated" text="notification box">
+                    <StackPane.margin>
+                        <Insets bottom="170.0" />
+                    </StackPane.margin>
+                </Label>
+            </children>
+        </StackPane>
+      <Label id="ActivityDescription" fx:id="ActivityDescription1" layoutX="369.0" layoutY="649.0" prefHeight="103.0" prefWidth="368.0" text="Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt" wrapText="true" />
+      <Label id="ActivityDescription" fx:id="ActivityDescription2" layoutX="764.0" layoutY="648.0" prefHeight="103.0" prefWidth="368.0" text="Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt" wrapText="true" />
+      <Label id="ActivityDescription" fx:id="ActivityDescription3" layoutX="1170.0" layoutY="650.0" prefHeight="103.0" prefWidth="368.0" text="Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt" wrapText="true" />
+    </children>
+</AnchorPane>
